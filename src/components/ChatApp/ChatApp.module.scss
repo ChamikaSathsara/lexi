@@ -1,0 +1,135 @@
+.body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 40px ), repeating-linear-gradient( #14386455, #143864 );
+}
+
+
+.heading {
+    font-size: xx-large;
+    font-weight: 600;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+
+}
+
+.subheading {
+    margin-top: 0;
+    font-size: medium;
+    font-weight: 400;
+    color: #cccccc;
+}
+
+.chatWindow {
+    /* From https://css.glass */
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.103);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(10.6px);
+    border: 0px solid #ccc;
+    height: fit-content;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    width: 30%;
+    scrollbar-width: none;
+
+    /* For Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+        /* For WebKit browsers */
+    }
+}
+
+
+
+.message {
+    padding: 10px 5px 10px 5px; //top right bottom left
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: large;
+    margin-bottom: 0.5rem;
+}
+
+.user {
+    text-align: right;
+    background-color: #ffffff;
+    padding-right: 1rem;
+    border-radius: 10px 10px 0px 10px;
+
+}
+
+.bot {
+    text-align: left;
+    background-color: #0088f8;
+    padding-left: 1rem;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.form {
+    display: flex;
+    width: 30%;
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.button {
+    padding: 10px 20px 10px 20px; //top right bottom left
+    background-color: #0088f8;
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;
+    border-radius: 10px;
+    border: 0px solid black;
+    font-weight: 500;
+    font-size: large;
+}
+
+.loading {
+    padding: 10px 5px 10px 5px; //top right bottom left
+    margin: 5px 0;
+    border-radius: 10px 10px 10px 0px;
+    text-align: left;
+    background-color: #0088f8;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #ffffffbd;
+    font-weight: 500;
+    font-size: small;
+
+    /* Animation for the three dots */
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 0.5em;
+        /* Adjust the size of the dots as needed */
+        height: 0.5em;
+        /* Adjust the size of the dots as needed */
+        animation: loading 2.5s infinite;
+        /* Animation duration and repetition */
+    }
+
+    @keyframes loading {
+        0% {
+            content: '.';
+        }
+
+        33% {
+            content: '..';
+        }
+
+        66% {
+            content: '....';
+        }
+    }
+}
